@@ -1,0 +1,26 @@
+{
+  "language": {
+    "spanish": {
+      "image": "images/spain.png",
+      "text": "ES",
+      "menu": {
+        "Services": "Servicios",
+        "whoWeAre": "¿Quiénes somos?",
+        "technologies": "Tecnologías",
+        "experience": "Experiencias",
+        "contact": "Contactanos"
+      }
+    },
+    "english": {
+      "image": "images/english.png",
+      "text": "EN",
+      "menu": {
+        "Services": "Services",
+        "whoWeAre": "Who we Are?",
+        "technologies": "Technologies",
+        "experience": "Experience",
+        "contact": "Contact"
+      }
+    }
+  }
+}

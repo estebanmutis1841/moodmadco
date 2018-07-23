@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mood&MadCo</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Muli" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+<header>
+    <nav>
+        <div class="Menu-logo">
+            <a href="./home.html">
+                <img src="images/logo.png" alt="">
+            </a>
+        </div>
+        <div class="Menu-content desktop">
+            <ul id="desktopContainer"></ul>
+        </div>
+        <div class="Menu-Language" id="menuLanguage">
+            <div class="Menu-Language-Default" id="languageDefault">
+                <img class="arrow" src="images/chevron.png" id="arrowLanguage"/>
+            </div>
+
+            <div class="Menu-choose-language hide" id="optionLanguage">
+            </div>
+        </div>
+        <div class="Menu-Hamburger" id="menu-mobile">
+            <img src="images/hamburguer.png" alt="Open menu">
+        </div>
+    </nav>
+    <div class="Menu-content mobile hide">
+        <div class="close-container">
+            <img src="images/close.png" alt="Close menu" id="closeMenu">
+        </div>
+        <ul id="mobileContainer"></ul>
+    </div>
+</header>
+    Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module build failed: Error: ENOENT: no such file or directory, open 'C:\Users\usuario\Documents\moodmadco\src\componen  ts\ourWork.html':
+  Error: ENOENT: no such file or directory, open 'C:\Users\usuario\Documents\moodmadco\src\components\ourWork.html'
+  
+  - compiler.js:76 
+    [moodmadco]/[html-webpack-plugin]/lib/compiler.js:76:16
+  
+  - Compiler.js:300 compile
+    [moodmadco]/[webpack]/lib/Compiler.js:300:11
+  
+  - Compiler.js:510 applyPluginsAsync.err
+    [moodmadco]/[webpack]/lib/Compiler.js:510:14
+  
+  - Tapable.js:202 next
+    [moodmadco]/[tapable]/lib/Tapable.js:202:11
+  
+  - CachePlugin.js:78 Compiler.<anonymous>
+    [moodmadco]/[webpack]/lib/CachePlugin.js:78:5
+  
+  - Tapable.js:206 Compiler.applyPluginsAsyncSeries
+    [moodmadco]/[tapable]/lib/Tapable.js:206:13
+  
+  - Compiler.js:507 compilation.seal.err
+    [moodmadco]/[webpack]/lib/Compiler.js:507:11
+  
+  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
+    [moodmadco]/[tapable]/lib/Tapable.js:195:46
+  
+  - Compilation.js:680 self.applyPluginsAsync.err
+    [moodmadco]/[webpack]/lib/Compilation.js:680:19
+  
+  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
+    [moodmadco]/[tapable]/lib/Tapable.js:195:46
+  
+  - Compilation.js:671 self.applyPluginsAsync.err
+    [moodmadco]/[webpack]/lib/Compilation.js:671:11
+  
+  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
+    [moodmadco]/[tapable]/lib/Tapable.js:195:46
+  
+  - Compilation.js:666 self.applyPluginsAsync.err
+    [moodmadco]/[webpack]/lib/Compilation.js:666:10
+  
+  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
+    [moodmadco]/[tapable]/lib/Tapable.js:195:46
+  
+  - Compilation.js:662 sealPart2
+    [moodmadco]/[webpack]/lib/Compilation.js:662:9
+  
+  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
+    [moodmadco]/[tapable]/lib/Tapable.js:195:46
+  
+  - Compilation.js:605 Compilation.seal
+    [moodmadco]/[webpack]/lib/Compilation.js:605:8
+  
+  - Compiler.js:504 applyPluginsParallel.err
+    [moodmadco]/[webpack]/lib/Compiler.js:504:17
+  
+  - Tapable.js:289 
+    [moodmadco]/[tapable]/lib/Tapable.js:289:11
+  
+  - Compilation.js:507 _addModuleChain
+    [moodmadco]/[webpack]/lib/Compilation.js:507:11
+  
+  - Compilation.js:477 processModuleDependencies.err
+    [moodmadco]/[webpack]/lib/Compilation.js:477:14
+  
+  - next_tick.js:131 _combinedTickCallback
+    internal/process/next_tick.js:131:7
+  
+  - next_tick.js:180 process._tickCallback
+    internal/process/next_tick.js:180:9
+  
+</pre>
+<script type="application/javascript" src="main.js"></script>
+</body>
+</html>
