@@ -10,6 +10,7 @@ module.exports = {
     entry: {
         main: './src/components/main.js',
         home: './src/components/home.js',
+        fullpage: './src/components/fullpage.js',
     },
     output: {
         filename: '[name].js',
@@ -26,6 +27,7 @@ module.exports = {
         // Copy assets to the extension' deployment dir.
         new CopyWebpackPlugin([{from: 'src/images/', to: 'images/'}]),
         new CopyWebpackPlugin([{from: 'src/styles.css', to: ''}]),
+        new CopyWebpackPlugin([{from: 'src/fullpage.css', to: ''}]),
         new CopyWebpackPlugin([{from: 'src/data/data.json', to: ''}]),
 
         // For Bootstrap

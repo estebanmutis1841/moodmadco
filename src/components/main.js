@@ -1,4 +1,4 @@
-import {scrollPage, gallery} from './home';
+import {gallery} from './home';
 
 let selectors =
         {
@@ -10,14 +10,11 @@ let selectors =
             arrowLanguage: '#arrowLanguage',
             optionLanguage: '#optionLanguage',
             closeMenu: '#closeMenu',
-
+            menuOptions: '.redirect-mobile',
             mobile: '.mobile',
             menuChooseLanguage: '.Menu-choose-language',
-            menuContent: '.Menu-content-items'
-        },
-    events =
-        {
-            click: 'click'
+            menuContent: '.Menu-content-items',
+            moreButton: '.button-more'
         };
 
 function toggleMenu() {
@@ -33,6 +30,7 @@ function menuEvents() {
     $(selectors.menuMobile).click(toggleMenu);
     $(selectors.closeMenu).click(toggleMenu);
     $(selectors.languageDefaultContainer).click(selectLanguage);
+    $(selectors.mobileListContainer).on('click', selectors.menuOptions, toggleMenu);
 }
 
 function callData(callbackSuccess) {
@@ -55,7 +53,7 @@ function templateMenu(items) {
 
     for(let item in items.menu) {
         if (items.menu.hasOwnProperty(item)) {
-            listItems += `<li><a href="./${item}.html">${items.menu[item]}</a></li>`;
+            listItems += `<li class="redirect-mobile"><a href="#${item}">${items.menu[item]}</a></li>`;
         }
     }
 
@@ -85,11 +83,44 @@ function loadContentPage() {
     });
 }
 
-function init() {
+function showServices() {
+    if($(window).width() > 768) {
+        $('.mobileService').remove();
+    } else {
+        $('.desktopService').remove();
+    }
+}
+function bs_input_file() {
+    $(".input-file").before(
+        function() {
+            if ( ! $(this).prev().hasClass('input-ghost') ) {
+                var element = $("<input type='file' class='input-ghost' style='visibility:hidden; height:0'>");
+                element.attr("name",$(this).attr("name"));
+                element.change(function(){
+                    element.next(element).find('input').val((element.val()).split('\\').pop());
+                });
+                $(this).find("button.btn-choose").click(function(){
+                    element.click();
+                });
+                $(this).find("button.btn-reset").click(function(){
+                    element.val(null);
+                    $(this).parents(".input-file").find('input').val('');
+                });
+                $(this).find('input').css("cursor","pointer");
+                $(this).find('input').mousedown(function() {
+                    $(this).parents('.input-file').prev().click();
+                    return false;
+                });
+                return element;
+            }
+        }
+    );
+}
 
+$(function() {
+    bs_input_file();
     menuEvents();
     loadContentPage();
     gallery();
-}
-
-window.onload = init();
+    showServices();
+});
