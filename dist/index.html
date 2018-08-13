@@ -25,41 +25,55 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.2/vendors/scrolloverflow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.2/fullpage.js"></script>
 
 </head>
 
 <body>
-<header>
-    <nav>
-        <div class="Menu-logo">
-            <a href="./home.html">
-                <img src="images/logo.png" alt="">
-            </a>
-        </div>
-        <div class="Menu-content desktop">
-            <ul id="desktopContainer"></ul>
-        </div>
-        <div class="Menu-Language" id="menuLanguage">
-            <div class="Menu-Language-Default" id="languageDefault">
-                <img class="arrow" src="images/chevron.png" id="arrowLanguage"/>
+    <div class="splash">
+        <img src="images/logo.png" alt="logo">
+            <div class="lds-css ng-scope">
+                <div class="lds-css ng-scope">
+                    <div class="lds-double-ring">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
             </div>
-
-            <div class="Menu-choose-language hide" id="optionLanguage">
-            </div>
-        </div>
-        <div class="Menu-Hamburger" id="menu-mobile">
-            <img src="images/hamburguer.png" alt="Open menu">
-        </div>
-    </nav>
-    <div class="Menu-content mobile hide">
-        <div class="close-container">
-            <img src="images/close.png" alt="Close menu" id="closeMenu">
-        </div>
-        <ul id="mobileContainer"></ul>
     </div>
-</header>
-    <div class="social-icons-container">
+    <div class="website-container hide">
+        <header>
+                <nav>
+                    <div class="Menu-logo">
+                        <a href="./home.html">
+                            <img src="images/logo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="Menu-content desktop">
+                        <ul id="desktopContainer"></ul>
+                    </div>
+                    <div class="Menu-Language" id="menuLanguage">
+                        <div class="Menu-Language-Default" id="languageDefault">
+                            <img class="arrow" src="images/chevron.png" id="arrowLanguage"/>
+                        </div>
+            
+                        <div class="Menu-choose-language hide" id="optionLanguage">
+                        </div>
+                    </div>
+                    <div class="Menu-Hamburger" id="menu-mobile">
+                        <img src="images/hamburguer.png" alt="Open menu">
+                    </div>
+                </nav>
+                <div class="Menu-content mobile hide">
+                    <div class="close-container">
+                        <img src="images/close.png" alt="Close menu" id="closeMenu">
+                    </div>
+                    <ul id="mobileContainer"></ul>
+                </div>
+            </header>
+            
+            <div class="social-icons-container">
     <div class="social-icon twitter"></div>
     <div class="social-icon facebook"></div>
     <div class="social-icon youtube"></div>
@@ -67,7 +81,7 @@
 </div>
 
 <div id="fullpage">
-    <section class="home-landing-page active section">
+    <section class="home-landing-page active section" id="Home">
         <div class="video-container">
             <img src="./images/logo-2.png" alt="">
             <video src="./images/working_video.mp4" autoplay loop></video>
@@ -89,7 +103,7 @@
                 <img src="./images/icons/icon-services.png" alt="our services">
                 <h2>Nuestros <span>servicios</span></h2>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis ex ornare, venenatis erat vitae, scelerisque metus. Vivamus eleifend tempus ex et efficitur. Quisque pellentesque lacinia quam, in ultricies magna ullamcorper in.</p>
+            <p>Contamos con profesionales capacitados para desarrollar cualquier proyecto con los estándares más altos de calidad,siguiendo las mejores practicas de la industria, trabajando bajo metodologias Itil, PMI, y agiles como Scrum, contando siempre con las últimas tecnologías que el mercado solicite, diversificamos nuestro portafolio para ofrecer los siguientes servicios:</p>
         </div>
     </section>
 
@@ -148,7 +162,7 @@
     </section>
 
     <section class="home-landing-page desktopService section" id="Services">
-        <div class="container-section slide">
+        <div class="container-section">
             <div class="services-header">
                 <img src="./images/icons/icon-services.png" alt="our services" class="services-icon-tablet">
                 <div class="service-text-container">
@@ -156,61 +170,64 @@
                         <img src="./images/icons/icon-services.png" alt="our services">
                         <h2>Nuestros <span>servicios</span></h2>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis ex ornare, venenatis erat vitae, scelerisque metus. Vivamus eleifend tempus ex et efficitur. Quisque pellentesque lacinia quam, in ultricies magna ullamcorper in.</p>
+                    <p>Contamos con profesionales capacitados para desarrollar cualquier proyecto con los estándares más altos de calidad,siguiendo las mejores practicas de la industria, trabajando bajo metodologias Itil, PMI, y agiles como Scrum, contando siempre con las últimas tecnologías que el mercado solicite, diversificamos nuestro portafolio para ofrecer los siguientes servicios:</p>
                 </div>
             </div>
 
-            <div class="service slide">
-                <img src="./images/icons/icon-webdesign.png" alt="">
-                <h3>Web design</h3>
-                <p>¿No sabes cómo poder transmitir al usuario el contenido del proyecto? Contamos con los conocimientos necesarios y con un equipo de diseño que nos apoyan para poder crear la mejor experiencia de usuario acorde al proyecto y a la imagen que su empresa quiere transmitir.</p>
-                <div class="button-more">
-                    <button data-toggle="modal" data-target="#webDesign" id="webDesignButton">More</button>
-                </div>
-            </div>
+            <div class="service-container">
 
-            <div class="service slide">
-                <img src="./images/icons/icon-ecomerce.png" alt="">
-                <h3>E-commerce</h3>
-                <p>¿Quieres vender tus productos online? Utilizamos las mejores herramientas para poder crear plataformas seguras y estables de pago y transacciones, esto con el fin de que el usuario se sienta seguro al poder hacer sus compras por internet y hacer crecer tu negocio.</p>
-                <div class="button-more">
-                    <button data-toggle="modal" data-target="#eCommerce" id="eCommerceButton">More</button>
+                <div class="service">
+                    <img src="./images/icons/icon-webdesign.png" alt="">
+                    <h3>Web design</h3>
+                    <p>¿No sabes cómo poder transmitir al usuario el contenido del proyecto? Contamos con los conocimientos necesarios y con un equipo de diseño que nos apoyan para poder crear la mejor experiencia de usuario acorde al proyecto y a la imagen que su empresa quiere transmitir.</p>
+                    <div class="button-more">
+                        <button data-toggle="modal" data-target="#webDesign" id="webDesignButton">More</button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="service slide">
-                <img src="./images/icons/icon-elearning.png" alt="">
-                <h3>E-learning</h3>
-                <p>¿Quieres crear medios innovadores de estudio? Hemos realizado diplomados y cursos para empresas online, siempre contando con el apoyo de expertos pedagógicos y utilizando plataformas como por ejemplo Moodle, siempre con el ideal de que el estudiante pueda aprender en su propio tiempo y dandole la mejor experiencia para estudiar online, permitiendo que se pueda conectar tanto desde su casa como desde su celular.</p>
-                <div class="button-more">
-                    <button data-toggle="modal" data-target="#eLearning" id="eLearningButton">More</button>
+                <div class="service">
+                    <img src="./images/icons/icon-ecomerce.png" alt="">
+                    <h3>E-commerce</h3>
+                    <p>¿Quieres vender tus productos online? Utilizamos las mejores herramientas para poder crear plataformas seguras y estables de pago y transacciones, esto con el fin de que el usuario se sienta seguro al poder hacer sus compras por internet y hacer crecer tu negocio.</p>
+                    <div class="button-more">
+                        <button data-toggle="modal" data-target="#eCommerce" id="eCommerceButton">More</button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="service slide">
-                <img src="./images/icons/icon-outsourcing.png" alt="">
-                <h3>Outsourcing</h3>
-                <p>¿Quiere ahorrar gastos de reclutamiento y selección de personal?, Mood&MadCo es tu aliado comercial, trabajamos y conseguimos el personal  de TI acorde a tus necesidades.</p>
-                <div class="button-more">
-                    <button data-toggle="modal" data-target="#outsourcing" id="outSourcingButton">More</button>
+                <div class="service">
+                    <img src="./images/icons/icon-elearning.png" alt="">
+                    <h3>E-learning</h3>
+                    <p>¿Quieres crear medios innovadores de estudio? Hemos realizado diplomados y cursos para empresas online, siempre contando con el apoyo de expertos pedagógicos y utilizando plataformas como por ejemplo Moodle, siempre con el ideal de que el estudiante pueda aprender en su propio tiempo y dandole la mejor experiencia para estudiar online, permitiendo que se pueda conectar tanto desde su casa como desde su celular.</p>
+                    <div class="button-more">
+                        <button data-toggle="modal" data-target="#eLearning" id="eLearningButton">More</button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="service slide">
-                <img src="./images/icons/icon-webdeveloper.png" alt="">
-                <h3>Web developer</h3>
-                <p>¿Quiere que tu compañía sea conocida en todo el mundo? Si lo que deseas es un sitio web, te ofrecemos diferentes opciones de acuerdo a tus necesidades, para que tu compañía se encuentre en los primeros lugares de los principales buscadores, contando siempre con la confianza de tener compatibilidad con los principales navegadores del mercado y de acuerdo a  sus necesidades.</p>
-                <div class="button-more">
-                    <button data-toggle="modal" data-target="#webDeveloper" id="webDeveloperButton">More</button>
+                <div class="service">
+                    <img src="./images/icons/icon-outsourcing.png" alt="">
+                    <h3>Outsourcing</h3>
+                    <p>¿Quiere ahorrar gastos de reclutamiento y selección de personal?, Mood&MadCo es tu aliado comercial, trabajamos y conseguimos el personal  de TI acorde a tus necesidades.</p>
+                    <div class="button-more">
+                        <button data-toggle="modal" data-target="#outsourcing" id="outSourcingButton">More</button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="service slide">
-                <img src="./images/icons/icon-appdeveloper.png" alt="">
-                <h3>App developer</h3>
-                <p>¿Tienes en mente la próxima red social o aplicación que revolucionará el mercado? Nosotros podemos ayudarte a hacerla realidad. Pensando siempre en el mercado cambiante de los dispositivos móviles tenemos un equipo multidisciplinario realizando desarrollos en iOS, Windows Phone y Android de acuerdo a tus necesidades.</p>
-                <div class="button-more">
-                    <button data-toggle="modal" data-target="#appDeveloper" id="appDeveloperButton">More</button>
+                <div class="service">
+                    <img src="./images/icons/icon-webdeveloper.png" alt="">
+                    <h3>Web developer</h3>
+                    <p>¿Quiere que tu compañía sea conocida en todo el mundo? Si lo que deseas es un sitio web, te ofrecemos diferentes opciones de acuerdo a tus necesidades, para que tu compañía se encuentre en los primeros lugares de los principales buscadores, contando siempre con la confianza de tener compatibilidad con los principales navegadores del mercado y de acuerdo a  sus necesidades.</p>
+                    <div class="button-more">
+                        <button data-toggle="modal" data-target="#webDeveloper" id="webDeveloperButton">More</button>
+                    </div>
+                </div>
+
+                <div class="service">
+                    <img src="./images/icons/icon-appdeveloper.png" alt="">
+                    <h3>App developer</h3>
+                    <p>¿Tienes en mente la próxima red social o aplicación que revolucionará el mercado? Nosotros podemos ayudarte a hacerla realidad. Pensando siempre en el mercado cambiante de los dispositivos móviles tenemos un equipo multidisciplinario realizando desarrollos en iOS, Windows Phone y Android de acuerdo a tus necesidades.</p>
+                    <div class="button-more">
+                        <button data-toggle="modal" data-target="#appDeveloper" id="appDeveloperButton">More</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -219,7 +236,12 @@
     <section class="home-landing-page who-we-are section" id="whoWeAre">
         <div class="who-we-are-content">
             <h2 class="who-we-are-header">¿Quienes <span>somos?</span></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis ex ornare, venenatis erat vitae, scelerisque metus. Vivamus eleifend tempus ex et efficitur. Quisque pellentesque lacinia quam, in ultricies magna ullamcorper in.</p>
+            <p>Somos una Joven compañía Colombiana ubicada en la ciudad de Bogotá,
+                enfocada en el desarrollo de aplicaciones web y móviles para la creación de sitios
+                e-commerce, e-learning, prestaciòn de sevicios en modalidad Outsourcing a la
+                medida y asesoramiento en proyectos digitales que faciliten el crecimiento y la
+                presencia en internet de las empresas bajo las mejores practicas de gestiòn de
+                proyectos de TI</p>
             <button class="work-with-us"  data-toggle="modal" data-target="#workForm">Trabaja con nosotros</button>
         </div>
     </section>
@@ -227,7 +249,7 @@
     <section class="home-landing-page technologies-section section" id="technologies">
         <div class="technologies-description">
             <h2 class="technologies-header">Tecnologías <span>que implementamos</span></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis ex ornare, venenatis erat vitae, scelerisque metus. Vivamus eleifend tempus ex et efficitur. Quisque pellentesque lacinia quam, in ultricies magna ullamcorper in.</p>
+            <p>Trabajamos siempre bajo la ultima tecnologia y de acuerdo a las necesidades de su negocio, presentamos algunos de las tecnologías bajo las cuales hemos realizado los proyectos en Mood & Mad Co.</p>
         </div>
         <div class="technologies-icons">
             <div class="back-end-container">
@@ -283,7 +305,7 @@
                 Nuestras
                 <span>Experiencias</span>
             </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis ex ornare, venenatis erat vitae.</p>
+            <p>En esta sección, encontraras algunos de los proyectos mas relevantes desarrollados por los integrantes de Mood&madCo.</p>
         </div>
 
         <div class="slide">
@@ -517,8 +539,8 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="index.js"></script>
-
+<script type="text/javascript" src="index.js"></script>                
+    </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -526,9 +548,7 @@
 <script type="application/javascript" src="main.js"></script>
 <script type="application/javascript">
     var myFullpage = new fullpage('#fullpage', {
-        autoScrolling:true,
-        scrollHorizontally: true,
-        lazyLoad: true
+        scrollOverflow: true
     });
 </script>
 </body>

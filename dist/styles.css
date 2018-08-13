@@ -1,12 +1,86 @@
+@keyframes lds-double-ring {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes TMNT {
+    0%  { left: 0px; }
+    100% { left: -1200px; }
+}
+
+@-webkit-keyframes lds-double-ring {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+@keyframes lds-double-ring_reverse {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes lds-double-ring_reverse {
+    0% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(-360deg);
+      transform: rotate(-360deg);
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-size: 16px;
-    background: radial-gradient(rgba(0,70,93,1), rgba(0,0,0,1));
-    overflow-x: hidden;
+   overflow-x: hidden;
 }
 
 header {
@@ -30,9 +104,73 @@ nav {
     box-sizing: border-box;
 }
 
-@-webkit-keyframes TMNT {
-    0%  { left: 0px; }
-    100% { left: -1200px; }
+.splash {
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10000;
+    display: block;
+    -webkit-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    animation: fadein 2s;
+
+}
+
+.website-container {
+    font-size: 16px;
+    background: radial-gradient(rgba(0,70,93,1), rgba(0,0,0,1));
+    -webkit-animation: fadein 4s;
+    -o-animation: fadein 4s;
+    animation: fadein 4s;
+    height: 100%;
+}
+
+.lds-css.ng-scope,
+.splash img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.lds-double-ring {
+    width: 100%;
+    height: 100%;
+}
+
+.lds-double-ring {
+    position: relative;
+}
+
+.lds-double-ring div {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    top: 20px;
+    left: 20px;
+    border-radius: 50%;
+    border: 8px solid #000;
+    border-color: #1b1f29 transparent #1b1f29 transparent;
+    -webkit-animation: lds-double-ring 1.8s linear infinite;
+    animation: lds-double-ring 1.8s linear infinite;
+}
+
+.lds-double-ring div:nth-child(2) {
+    width: 140px;
+    height: 140px;
+    top: 30px;
+    left: 30px;
+    border-color: transparent #3dc1ff transparent #3dc1ff;
+    -webkit-animation: lds-double-ring_reverse 1.8s linear infinite;
+    animation: lds-double-ring_reverse 1.8s linear infinite;
+}
+
+.lds-double-ring {
+    width: 200px;
+    height: 200px;
+    -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+    transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
 }
 
 .text-introduction {
@@ -98,7 +236,7 @@ nav {
 
 .Menu-choose-language {
     position: absolute;
-    margin-top: 23px;
+    margin-top: 17px;
     padding: 10px 15px;
     background-color: #354052;
     max-width: 130px;
@@ -127,7 +265,7 @@ nav {
     color: white;
     font-weight: 400;
     font-style: normal;
-    font-size: 14px;
+    font-size: 20px;
     font-stretch: normal;
     text-align: center;
 }
@@ -435,28 +573,28 @@ video {
 .social-icon.twitter {
     background-image: url(./images/icons/icon-twitter.png);
     background-position: 10px center;
-    background-size: 70%;
+    background-size: 80%;
     background-repeat: no-repeat;
 }
 
 .social-icon.facebook {
     background-image: url(./images/icons/icon-face.png);
     background-position: center;
-    background-size: 30%;
+    background-size: 40%;
     background-repeat: no-repeat;
 }
 
 .social-icon.youtube {
     background-image: url(./images/icons/icon-youtube.png);
     background-position: 10px center;
-    background-size: 70%;
+    background-size: 80%;
     background-repeat: no-repeat;
 }
 
 .social-icon.skype {
     background-image: url(./images/icons/icon-skype.png);
     background-position: 10px center;
-    background-size: 70%;
+    background-size: 80%;
     background-repeat: no-repeat;
 }
 
@@ -1064,9 +1202,37 @@ form input[type="submit"],
     padding: 0;
 }
 
+.fullpage-wrapper {
+width: 100%!important;
+transform: none!important;
+}
+
+.fp-section {
+width: 100%!important;
+position: absolute;
+left: 0;
+top: 0;
+visibility: hidden;
+opacity: 0;
+z-index: 0;
+transition: all .7s ease-in-out;
+}
+
+.fp-section.active {
+visibility: visible;
+opacity: 1;
+z-index: 1;
+}
+
 @media screen and (min-width: 768px) {
     .Menu-logo img {
         margin-left: 36px;
+        width: 40px;
+    }
+
+    .Menu-Language-Default img,
+    .Menu-choose-language img {
+        width: 30px;
     }
 
     .Menu-Hamburger {
@@ -1087,7 +1253,7 @@ form input[type="submit"],
         display: inline-block;
         color: #ffffff;
         font-family: 'Montserrat', sans-serif;
-        font-size: 14px;
+        font-size: 15px;
         font-style: normal;
         font-stretch: normal;
         font-weight: 400;
@@ -1143,8 +1309,8 @@ form input[type="submit"],
 
     .social-icon {
         border-radius: 5px;
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         border: 1px solid #00c1ff;
         color: #ffffff;
         font-family: 'Muli', sans-serif;
@@ -1277,8 +1443,14 @@ form input[type="submit"],
 
     .service {
         width: 50%;
-        padding: 30px;
+        padding: 30px 60px;
         box-sizing: border-box;
+    }
+
+    .service-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .who-we-are {
@@ -1423,11 +1595,6 @@ form input[type="submit"],
         padding: 80px 60px;
     }
 
-    .container-section {
-        width: 80%;
-        margin: 0 auto;
-    }
-
     .service-text-container {
         width: 50%;
     }
@@ -1438,7 +1605,7 @@ form input[type="submit"],
     }
 
     .service {
-        width: 33%;
+        width: 33.33%;
     }
 
     .text-container {
@@ -1524,6 +1691,10 @@ form input[type="submit"],
     .our-work .experience-header,
     .experience p {
         padding-right: 200px;
+    }
+
+    .Menu-content ul li {
+        font-size: 20px;
     }
 }
 

@@ -25,42 +25,56 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.2/vendors/scrolloverflow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.2/fullpage.js"></script>
 
 </head>
 
 <body>
-<header>
-    <nav>
-        <div class="Menu-logo">
-            <a href="./home.html">
-                <img src="images/logo.png" alt="">
-            </a>
-        </div>
-        <div class="Menu-content desktop">
-            <ul id="desktopContainer"></ul>
-        </div>
-        <div class="Menu-Language" id="menuLanguage">
-            <div class="Menu-Language-Default" id="languageDefault">
-                <img class="arrow" src="images/chevron.png" id="arrowLanguage"/>
+    <div class="splash">
+        <img src="images/logo.png" alt="logo">
+            <div class="lds-css ng-scope">
+                <div class="lds-css ng-scope">
+                    <div class="lds-double-ring">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
             </div>
-
-            <div class="Menu-choose-language hide" id="optionLanguage">
-            </div>
-        </div>
-        <div class="Menu-Hamburger" id="menu-mobile">
-            <img src="images/hamburguer.png" alt="Open menu">
-        </div>
-    </nav>
-    <div class="Menu-content mobile hide">
-        <div class="close-container">
-            <img src="images/close.png" alt="Close menu" id="closeMenu">
-        </div>
-        <ul id="mobileContainer"></ul>
     </div>
-</header>
-    {{content}}
-
+    <div class="website-container hide">
+        <header>
+                <nav>
+                    <div class="Menu-logo">
+                        <a href="./home.html">
+                            <img src="images/logo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="Menu-content desktop">
+                        <ul id="desktopContainer"></ul>
+                    </div>
+                    <div class="Menu-Language" id="menuLanguage">
+                        <div class="Menu-Language-Default" id="languageDefault">
+                            <img class="arrow" src="images/chevron.png" id="arrowLanguage"/>
+                        </div>
+            
+                        <div class="Menu-choose-language hide" id="optionLanguage">
+                        </div>
+                    </div>
+                    <div class="Menu-Hamburger" id="menu-mobile">
+                        <img src="images/hamburguer.png" alt="Open menu">
+                    </div>
+                </nav>
+                <div class="Menu-content mobile hide">
+                    <div class="close-container">
+                        <img src="images/close.png" alt="Close menu" id="closeMenu">
+                    </div>
+                    <ul id="mobileContainer"></ul>
+                </div>
+            </header>
+            
+            {{content}}                
+    </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -68,9 +82,7 @@
 <script type="application/javascript" src="main.js"></script>
 <script type="application/javascript">
     var myFullpage = new fullpage('#fullpage', {
-        autoScrolling:true,
-        scrollHorizontally: true,
-        lazyLoad: true
+        scrollOverflow: true
     });
 </script>
 </body>
